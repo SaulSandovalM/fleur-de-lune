@@ -4,15 +4,19 @@ import {
   Button,
   Card,
   CardActionArea,
+  CardActions,
   CardContent,
   Container,
   Grid,
+  InputAdornment,
   Rating,
+  TextField,
   Typography,
 } from "@mui/material";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../../Firebase";
 import img1 from "../../assets/img1.png";
@@ -1106,6 +1110,226 @@ export default function Home(props) {
                 </CardContent>
               </CardActionArea>
             </Card>
+          </Grid>
+          <Grid item xs={12} sx={{ mt: 6 }}>
+            <Typography sx={{ color: "#F9B934", textAlign: "flex-start" }}>
+              DIFERENCIAS
+            </Typography>
+            <Typography variant="h4" sx={{ textAlign: "flex-start", mt: 1 }}>
+              ¿Qué lo hace diferente?
+            </Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Card sx={{ width: "100%", background: "#EDF1F7" }}>
+              <CardContent>
+                <Typography variant="h6">Alta calidad</Typography>
+                <Typography sx={{ color: "gray" }}>
+                  Siempre le daremos la oportunidad de familiarizarse con el
+                  instrumento más de cerca.
+                </Typography>
+              </CardContent>
+              <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
+                <Button size="small" sx={{ textTransform: "none" }}>
+                  Aprende mas
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={4}>
+            <Card sx={{ width: "100%", background: "#EDF1F7" }}>
+              <CardContent>
+                <Typography variant="h6">Instrumentos musicales</Typography>
+                <Typography sx={{ color: "gray" }}>
+                  Nuestros empleados están siempre listos para ayudarlo a elegir
+                  instrumentos musicales, ya sea de cuerda, teclado, percusión o
+                  cualquier otro instrumento.
+                </Typography>
+              </CardContent>
+              <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
+                <Button size="small" sx={{ textTransform: "none" }}>
+                  Aprende mas
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={4}>
+            <Card sx={{ width: "100%", background: "#EDF1F7" }}>
+              <CardContent>
+                <Typography variant="h6">asistencia gratuita</Typography>
+                <Typography sx={{ color: "gray" }}>
+                  Siempre obtendrá asesoramiento profesional en la selección de
+                  instrumentos musicales, equipos y accesorios.
+                </Typography>
+              </CardContent>
+              <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
+                <Button size="small" sx={{ textTransform: "none" }}>
+                  Aprende mas
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+      <Box sx={{ background: "#EDF1F7", pt: 10, pb: 10, mt: 8 }}>
+        <Container>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Typography sx={{ color: "#F9B934", textAlign: "center" }}>
+                TESTIMONIOS
+              </Typography>
+              <Typography variant="h4" sx={{ textAlign: "center", mt: 1 }}>
+                Con la confianza de las empresas más innovadoras del mundo,
+                grandes y pequeñas
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ textAlign: "center", color: "gray", mt: 1 }}
+              >
+                Empresas de todo el mundo han tenido experiencias fantásticas
+                con theFront. Esto es lo que tienen que decir.
+              </Typography>
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  sx={{ textTransform: "none", mt: 1, background: "#4582fe" }}
+                >
+                  Leer todas las resenas
+                </Button>
+              </Box>
+            </Grid>
+            <Grid item xs={4} sx={{ mt: 2 }}>
+              <Card sx={{ width: "100%" }}>
+                <CardContent>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img
+                      src="https://assets.maccarianagency.com/avatars/img4.jpg"
+                      alt=""
+                      style={{ width: 100, height: 100, borderRadius: 5 }}
+                    />
+                    <Box sx={{ marginLeft: 2 }}>
+                      <Typography>Clara Bertoletti</Typography>
+                      <Typography variant="subtitle2" sx={{ color: "gray" }}>
+                        amante de mui
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Typography sx={{ mt: 2, color: "gray" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={4} sx={{ mt: 2 }}>
+              <Card sx={{ width: "100%" }}>
+                <CardContent>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img
+                      src="https://assets.maccarianagency.com/avatars/img4.jpg"
+                      alt=""
+                      style={{ width: 100, height: 100, borderRadius: 5 }}
+                    />
+                    <Box sx={{ marginLeft: 2 }}>
+                      <Typography>Clara Bertoletti</Typography>
+                      <Typography variant="subtitle2" sx={{ color: "gray" }}>
+                        amante de mui
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Typography sx={{ mt: 2, color: "gray" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={4} sx={{ mt: 2 }}>
+              <Card sx={{ width: "100%" }}>
+                <CardContent>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img
+                      src="https://assets.maccarianagency.com/avatars/img4.jpg"
+                      alt=""
+                      style={{ width: 100, height: 100, borderRadius: 5 }}
+                    />
+                    <Box sx={{ marginLeft: 2 }}>
+                      <Typography>Clara Bertoletti</Typography>
+                      <Typography variant="subtitle2" sx={{ color: "gray" }}>
+                        amante de mui
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Typography sx={{ mt: 2, color: "gray" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+      <Container sx={{ mt: 8 }}>
+        <Grid container>
+          <Grid item xs={12} sx={{ background: "#4582FE", borderRadius: 2 }}>
+            <Box sx={{ pt: 8, pb: 8 }}>
+              <Typography
+                variant="h4"
+                sx={{ color: "white", textAlign: "center" }}
+              >
+                Suscríbete a nuestro boletín
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ color: "white", textAlign: "center", mt: 2 }}
+              >
+                No pierda la oportunidad de ser uno de los primeros en conocer
+                nuestras próximas noticias y actualizaciones.
+              </Typography>
+              <Box
+                sx={{
+                  mt: 3,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextField
+                  placeholder="Introducce tu correo electronico"
+                  variant="outlined"
+                  sx={{ width: "35%" }}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <NotificationsNoneOutlinedIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+              </Box>
+            </Box>
           </Grid>
         </Grid>
       </Container>

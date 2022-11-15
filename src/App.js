@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Divider } from "@mui/material";
 import Router from "./routes/Router";
 // import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -61,7 +61,8 @@ export default function App() {
           <Box>
             {/* <Nav user={user} auth={auth} /> */}
             <Router user={user} />
-            <Box sx={{ background: "#2B3445", pt: 12, pb: 12 }}>
+            <Box sx={{ pt: 12, pb: 12 }}>
+              <Divider style={{ width: "100%" }} />
               <Footer />
             </Box>
           </Box>
